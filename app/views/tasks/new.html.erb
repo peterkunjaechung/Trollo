@@ -1,0 +1,9 @@
+<h1>Add Tasks</h1>
+<%= form_with(model: [@list, @task], local: true, class: "ui form" ) do |f| %>
+  <%= f.label :board %>
+  <%= f.select :board_id, @boards.collect { |b| [b.name, b.id] } %>
+  <br />
+  <%= f.label :role %>
+  <br />
+  <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>
